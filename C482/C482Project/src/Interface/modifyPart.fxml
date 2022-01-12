@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.modifyPartController">
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="10.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="10.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    </rowConstraints>
+    <children>
+        <StackPane prefHeight="150.0" prefWidth="200.0">
+            <children>
+                <Label text="Modify Part" />
+            </children>
+        </StackPane>
+        <StackPane prefHeight="150.0" prefWidth="152.0" GridPane.rowIndex="1">
+            <children>
+                <Label text="ID" />
+            </children>
+        </StackPane>
+        <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.rowIndex="2">
+            <children>
+                <Label text="Name" />
+            </children>
+        </StackPane>
+        <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.rowIndex="3">
+            <children>
+                <Label text="Inventory" />
+            </children>
+        </StackPane>
+        <StackPane GridPane.rowIndex="4">
+            <children>
+                <Label text="Price" />
+            </children>
+        </StackPane>
+        <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.rowIndex="5">
+            <children>
+                <Label fx:id="changeMeLabel" text="Machine ID" />
+            </children>
+        </StackPane>
+        <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.rowIndex="6">
+            <children>
+                <Label text="Max" />
+            </children>
+        </StackPane>
+        <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="7">
+            <children>
+                <Button fx:id="modifyPartSaveButton" mnemonicParsing="false" onAction="#modifyPartSaveButtonOnAction" text="Save" />
+            </children>
+        </StackPane>
+        <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="7">
+            <children>
+                <Button fx:id="modifyPartCancelButton" mnemonicParsing="false" onAction="#onActionReturnToMain" text="Cancel" />
+            </children>
+        </StackPane>
+        <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1">
+            <children>
+                <RadioButton fx:id="modifyInsourceRadio" mnemonicParsing="false" onAction="#modifyInsourceRadioAction" selected="true" text="Insource">
+               <toggleGroup>
+                  <ToggleGroup fx:id="toggle" />
+               </toggleGroup></RadioButton>
+            </children>
+        </StackPane>
+        <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="2">
+            <children>
+                <RadioButton fx:id="modifyOutsourceRadio" mnemonicParsing="false" onAction="#modifyOutsourceRadioAction" text="Outsource" toggleGroup="$toggle" />
+            </children>
+        </StackPane>
+        <TextField fx:id="modifyPartIDTextField" onAction="#modifyPartIDTextFieldOnAction" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <TextField fx:id="modifyPartNameTextField" onAction="#modifyPartNameOnAction" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        <TextField fx:id="modifyPartInventoryTextField" onAction="#modifyPartInventoryTFOnAction" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+        <TextField fx:id="modifyPartPriceTF" onAction="#modifyPartPriceTFOnAction" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+        <TextField fx:id="modifyPartSpecialTF" onAction="#modifyPartSpecialTFOnAction" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+        <TextField fx:id="modifyPartMaxTF" onAction="#modifyPartMaxTFOnAction" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+        <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="6">
+            <children>
+                <Label text="Min" />
+            </children>
+        </StackPane>
+        <TextField fx:id="modifyPartMinTF" onAction="#modifyPartMinTFOnAction" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+    </children>
+</GridPane>
